@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .faq {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .question {
+            font-weight: bold;
+            color: #007bff;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        .answer {
+            display: none;
+            padding-top: 5px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>제품 FAQ</h1>
+    
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer(0)">Q1. 이 제품의 보증기간은 어떻게 되나요?</div>
+        <div class="answer">A1. 본 제품은 구매일로부터 1년간 보증됩니다.</div>
+    </div>
+    
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer(1)">Q2. 사용 시 주의사항이 있나요?</div>
+        <div class="answer">A2. 장시간 사용 시 과열을 방지하기 위해 적절한 휴식을 권장합니다.</div>
+    </div>
+    
+    <script>
+        function toggleAnswer(index) {
+            var answers = document.querySelectorAll('.answer');
+            answers[index].style.display = (answers[index].style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
